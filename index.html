@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Blog</title>
+  <title>Juan's Blog</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -40,26 +40,28 @@
       margin-top: 0;
       font-size: 2rem;
     }
-    .categories, .latest-posts, .about-preview {
+    section {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    .categories h2, .latest-posts h2, .about-preview h2 {
+    section h2 {
       border-bottom: 2px solid #0077cc;
       padding-bottom: 0.5rem;
     }
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
     }
     .category-box {
       background: #fff;
       padding: 1rem;
       border-radius: 8px;
-      text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .category-box h3 {
+      margin-top: 0;
     }
     .posts-grid {
       display: grid;
@@ -93,6 +95,7 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -100,34 +103,25 @@
 
   <!-- Header / Navigation -->
   <header>
-    <h1>My Blog</h1>
+    <h1>Juan's Blog</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="#">Blog</a>
+      <a href="posts.html">Blog</a>
       <a href="#">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h2>Welcome to my blog!</h2>
-    <p>I write about tech, food, and whatever random ideas spark my curiosity. Dive in and explore—there’s a little something for everyone.</p>
-  </section>
-
-  <!-- Categories -->
-  <section class="categories">
-    <h2>Explore Topics</h2>
-    <div class="category-grid">
-      <div class="category-box">Tech</div>
-      <div class="category-box">Food</div>
-      <div class="category-box">Random Thoughts</div>
-    </div>
+    <h2>Hi, my name is Juan!</h2>
+    <p>I write about tech, food, and all kinds of random things that spark my interest. This blog is my space to share tips, experiences, and ideas—sometimes helpful, sometimes just fun. Whether you’re into gadgets, recipes, or random thoughts, I hope you’ll find something here that makes you stop and think (or at least smile).</p>
   </section>
 
   <!-- Latest Posts -->
   <section class="latest-posts">
-    <h2>Latest Posts</h2>
+    <h2>Latest Blog Posts</h2>
+    <p>Here’s what I’ve been writing lately—dive into the newest posts below, or check out the full blog for more.</p>
     <div class="posts-grid">
       <div class="post">
         <h3><a href="first-post.html">SSDs vs HDDs: Which Should You Choose?</a></h3>
@@ -135,20 +129,38 @@
       </div>
       <!-- Future posts go here -->
     </div>
-    <a href="#" class="btn">See all posts →</a>
+    <a href="posts.html" class="btn">See all posts →</a>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="categories">
+    <h2>Explore Topics</h2>
+    <div class="category-grid">
+      <div class="category-box">
+        <h3>🖥️ Tech</h3>
+        <p>From computer builds to useful tips, I share what I’ve learned and discovered in the tech world.</p>
+      </div>
+      <div class="category-box">
+        <h3>🍜 Food</h3>
+        <p>Food is one of life’s best joys—expect recipes, reviews, and random food adventures.</p>
+      </div>
+      <div class="category-box">
+        <h3>✨ Random Thoughts</h3>
+        <p>Not everything fits in a category, and that’s what makes it fun.</p>
+      </div>
+    </div>
   </section>
 
   <!-- About Preview -->
   <section class="about-preview">
     <h2>About Me</h2>
-    <p>Hello! 👋 My name is Juan, and this is my blog. I created this site to learn coding and share what I’m learning along the way. <a href="about.html">Read more →</a></p>
+    <p>I’m just a curious person who enjoys learning, creating, and writing about things I love. This blog is part journal, part guide, and part experiment. <a href="about.html">Read more about me →</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 My Blog | Built with ❤ using GitHub Pages</p>
+    <p>&copy; 2025 Juan's Blog</p>
   </footer>
 
 </body>
 </html>
-
