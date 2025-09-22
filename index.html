@@ -2,165 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Juan's Blog</title>
+  <title>Juan’s Blog</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #0077cc;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: #e9f4ff;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      margin-top: 0;
-      font-size: 2rem;
-    }
-    section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section h2 {
-      border-bottom: 2px solid #0077cc;
-      padding-bottom: 0.5rem;
-    }
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .category-box {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .category-box h3 {
-      margin-top: 0;
-    }
-    .posts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .post {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .post h3 {
-      margin-top: 0;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #0077cc;
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background: #005fa3;
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; line-height:1.6; }
+    header { background:#333; color:#fff; padding:1rem 2rem; }
+    nav a { color:#fff; margin-right:1rem; text-decoration:none; }
+    .hero { padding:3rem 2rem; text-align:center; background:#eee; }
+    .categories, .latest-posts, .about-preview { padding:2rem; max-width:900px; margin:0 auto; }
+    h1,h2,h3 { margin-top:0; }
+    .category-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; }
+    .category-box { display:block; background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s; }
+    .category-box:hover { transform: translateY(-3px); box-shadow:0 4px 10px rgba(0,0,0,0.15); }
+    .posts-grid { display:grid; gap:1rem; }
+    .post { background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    footer { text-align:center; padding:2rem; background:#333; color:#fff; margin-top:2rem; }
+    .btn { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#0077cc; color:#fff; text-decoration:none; border-radius:5px; }
+    .btn:hover { background:#005fa3; }
   </style>
 </head>
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <h1>Juan's Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="posts.html">Blog</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Hi, my name is Juan!</h2>
-    <p>I write about tech, food, and all kinds of random things that spark my interest. This blog is my space to share tips, experiences, and ideas—sometimes helpful, sometimes just fun. Whether you’re into gadgets, recipes, or random thoughts, I hope you’ll find something here that makes you stop and think (or at least smile).</p>
-  </section>
+<section class="hero">
+  <h1>Hi, my name is Juan!</h1>
+  <p>I write about tech, food, and random things that spark my interest.  
+  This blog is my space to share tips, experiences, and ideas—sometimes helpful, sometimes just fun.  
+  Whether you’re into gadgets, recipes, or random thoughts, I hope you’ll find something here that makes you stop and think (or at least smile).</p>
+</section>
 
-  <!-- Latest Posts -->
-  <section class="latest-posts">
-    <h2>Latest Blog Posts</h2>
-    <p>Here’s what I’ve been writing lately—dive into the newest posts below, or check out the full blog for more.</p>
-    <div class="posts-grid">
-      <div class="post">
-        <h3><a href="first-post.html">SSDs vs HDDs: Which Should You Choose?</a></h3>
-        <p>A guide on whether to choose an SSD or HDD when buying or building a computer.</p>
-      </div>
-      <!-- Future posts go here -->
-    </div>
-    <a href="posts.html" class="btn">See all posts →</a>
-  </section>
+<section class="categories">
+  <h2>Explore Topics</h2>
+  <div class="category-grid">
+    <a href="tech.html" class="category-box">
+      <h3>🖥️ Tech</h3>
+      <p>From computer builds to useful tips, I share what I’ve learned and discovered in the tech world.</p>
+    </a>
+    <a href="food.html" class="category-box">
+      <h3>🍜 Food</h3>
+      <p>Food is one of life’s best joys—expect recipes, reviews, and random food adventures.</p>
+    </a>
+    <a href="random.html" class="category-box">
+      <h3>✨ Random Thoughts</h3>
+      <p>Not everything fits in a category, and that’s what makes it fun.</p>
+    </a>
+  </div>
+</section>
 
-  <!-- Featured Categories -->
-  <section class="categories">
-    <h2>Explore Topics</h2>
-    <div class="category-grid">
-      <div class="category-box">
-        <h3>🖥️ Tech</h3>
-        <p>From computer builds to useful tips, I share what I’ve learned and discovered in the tech world.</p>
-      </div>
-      <div class="category-box">
-        <h3>🍜 Food</h3>
-        <p>Food is one of life’s best joys—expect recipes, reviews, and random food adventures.</p>
-      </div>
-      <div class="category-box">
-        <h3>✨ Random Thoughts</h3>
-        <p>Not everything fits in a category, and that’s what makes it fun.</p>
-      </div>
-    </div>
-  </section>
+<section class="latest-posts">
+  <h2>Latest Blog Posts</h2>
+  <p>Here’s what I’ve been writing lately—dive into the newest posts below, or check out the full blog for more.</p>
 
-  <!-- About Preview -->
-  <section class="about-preview">
-    <h2>About Me</h2>
-    <p>I’m just a curious person who enjoys learning, creating, and writing about things I love. This blog is part journal, part guide, and part experiment. <a href="about.html">Read more about me →</a></p>
-  </section>
+  <div id="post-list"></div>
+  <a href="posts.html" class="btn">See all posts →</a>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Juan's Blog</p>
-  </footer>
+<section class="about-preview">
+  <h2>About Me</h2>
+  <p>I’m just a curious person who enjoys learning, creating, and writing about things I love.  
+  This blog is part journal, part guide, and part experiment.  
+  <a href="about.html">Read more about me →</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Juan’s Blog</p>
+</footer>
+
+<script>
+  // Load posts.json
+  fetch('posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const container = document.getElementById('post-list');
+      let html = '<div class="posts-grid">';
+
+      // newest first, show 3 latest
+      posts.slice().reverse().slice(0,3).forEach(post => {
+        html += `
+          <div class="post">
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p>${post.excerpt}</p>
+            <small>📅 ${post.date} | <a href="${post.category}.html">${post.category}</a></small>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+    })
+    .catch(err => {
+      console.error('Error loading posts:', err);
+    });
+</script>
 
 </body>
 </html>
+
