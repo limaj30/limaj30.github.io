@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Posts</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width:900px; margin:2rem auto; background:#f9f9f9; color:#333; line-height:1.6; }
+    header nav a { margin-right:1rem; text-decoration:none; color:#0077cc; }
+    .post { background:#fff; padding:1rem; margin-bottom:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<h1>Tech Posts</h1>
+<div id="category-posts"></div>
+
+<script>
+  fetch('posts.json')
+    .then(res => res.json())
+    .then(posts => {
+      const container = document.getElementById('category-posts');
+      posts.filter(p => p.category === 'food').reverse().forEach(post => {
+        container.innerHTML += `
+          <div class="post">
+            <h3><a href="${post.link}">${post.title}</a></h3>
+            <p>${post.excerpt}</p>
+            <small>📅 ${post.date}</small>
+          </div>
+        `;
+      });
+    })
+    .catch(err => console.error('Error loading category posts:', err));
+</script>
+
+</body>
+</html>
