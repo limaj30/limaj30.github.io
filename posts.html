@@ -9,6 +9,9 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f8;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background: #222;
@@ -24,8 +27,14 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
+      font-size: 1.1rem; /* matches homepage */
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #0077cc;
     }
     main {
+      flex: 1;
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
@@ -44,26 +53,50 @@
     .post {
       background: white;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-top: 4px solid #0077cc;
     }
     .post:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
     }
     .post h2 {
       margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .post h2 a {
+      text-decoration: none;
       color: #0077cc;
+      transition: color 0.3s;
+    }
+    .post h2 a:hover {
+      color: #005fa3;
+    }
+    .post small {
+      display: block;
+      margin-bottom: 1rem;
+      color: #666;
     }
     .post p {
       margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .post a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    .post a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 2rem 0;
-      margin-top: 2rem;
+      padding: 1.5rem 0;
       background: #222;
       color: white;
+      border-top: 3px solid #444;
     }
   </style>
 </head>
@@ -106,4 +139,3 @@
 </script>
 </body>
 </html>
-
