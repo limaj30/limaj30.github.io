@@ -2,22 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Juan’s Blog</title>
+  <title>Juan Lima | Blog</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; line-height:1.6; }
-    header { background:#333; color:#fff; padding:1rem 2rem; }
-    nav a { color:#fff; margin-right:1rem; text-decoration:none; }
-    .hero { padding:3rem 2rem; text-align:center; background:#eee; }
-    .categories, .latest-posts, .about-preview { padding:2rem; max-width:900px; margin:0 auto; }
-    h1,h2,h3 { margin-top:0; }
-    .category-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1rem; }
-    .category-box { display:block; background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-decoration:none; color:inherit; transition: transform 0.2s, box-shadow 0.2s; }
-    .category-box:hover { transform: translateY(-3px); box-shadow:0 4px 10px rgba(0,0,0,0.15); }
-    .posts-grid { display:grid; gap:1rem; }
-    .post { background:#fff; padding:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    footer { text-align:center; padding:2rem; background:#333; color:#fff; margin-top:2rem; }
-    .btn { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#0077cc; color:#fff; text-decoration:none; border-radius:5px; }
-    .btn:hover { background:#005fa3; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #0077cc;
+      padding: 1rem 2rem;
+    }
+    header nav {
+      display: flex;
+      justify-content: center; /* centers links */
+      gap: 2rem;
+    }
+    header nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #0077cc, #005fa3);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .cta:hover {
+      background: #005fa3;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -31,25 +65,15 @@
   </nav>
 </header>
 
-<style>
-  header nav {
-    display: flex;
-    justify-content: center; /* centers the links */
-    gap: 2rem; /* space between them */
-  }
-  header nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-</style>
-
-
 <section class="hero">
-  <h1>Welcome to my corner of the internet 👋</h1>
-  <p>I share thoughts on tech, gaming, and everyday lessons worth learning.</p>
+  <h1>Welcome to my small corner of the internet!</h1>
+  <p>I write about technology, food, and random life insights.</p>
   <a href="posts.html" class="cta">Read My Blog →</a>
 </section>
+
+</body>
+</html>
+
 
 <style>
   .hero {
