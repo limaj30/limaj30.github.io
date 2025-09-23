@@ -10,20 +10,28 @@
       background: #f4f6f8;
       color: #333;
     }
+    /* Navbar */
     header {
-      background: #0077cc;
-      padding: 1rem 2rem;
+      background: #222;
+      border-bottom: 3px solid #444;
+      padding: 1rem 0;
     }
     header nav {
       display: flex;
-      justify-content: center; /* centers links */
+      justify-content: center;
       gap: 2rem;
     }
     header nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
+    header nav a:hover {
+      color: #00bfff;
+    }
+    /* Hero Section */
     .hero {
       text-align: center;
       padding: 5rem 1rem;
@@ -31,31 +39,118 @@
       color: white;
     }
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      color: #e0e0e0;
     }
-    .cta {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: white;
+    /* Section wrapper */
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #222;
+    }
+    /* Explore Topics */
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .topic-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+    .topic-card h3 {
+      margin-top: 0;
       color: #0077cc;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
     }
-    .cta:hover {
-      background: #005fa3;
+    /* Blog Posts */
+    .post-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+    .post-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+    }
+    .post-card h3 a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .post-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .post-card small {
+      display: block;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    /* About Preview */
+    .about-preview {
+      text-align: center;
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .about-preview p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .about-preview a {
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      background: #0077cc;
       color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .about-preview a:hover {
+      background: #005fa3;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <header>
   <nav>
     <a href="index.html">Home</a>
@@ -65,112 +160,79 @@
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <h1>Welcome to my small corner of the internet!</h1>
-  <p>I write about technology, food, and random life insights.</p>
-  <a href="posts.html" class="cta">Read My Blog →</a>
+  <p>I write about tech, food, and random life insights.</p>
 </section>
 
-</body>
-</html>
-
-
-<style>
-  .hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: #0077cc;
-    color: white;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  .cta {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: white;
-    color: #0077cc;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s, color 0.3s;
-  }
-  .cta:hover {
-    background: #005fa3;
-    color: white;
-  }
-</style>
-
-
-<section class="categories">
-  <h2>Explore Topics</h2>
-  <div class="category-grid">
-    <a href="tech.html" class="category-box">
-      <h3>🖥️ Tech</h3>
-      <p>From computer builds to useful tips, I share what I’ve learned and discovered in the tech world.</p>
-    </a>
-    <a href="food.html" class="category-box">
-      <h3>🍜 Food</h3>
-      <p>Food is one of life’s best joys—expect recipes, reviews, and random food adventures.</p>
-    </a>
-    <a href="random.html" class="category-box">
-      <h3>✨ Random Thoughts</h3>
-      <p>Not everything fits in a category, and that’s what makes it fun.</p>
-    </a>
+<!-- Explore Topics -->
+<section>
+  <h2>🔍 Explore Topics</h2>
+  <div class="topics">
+    <div class="topic-card">
+      <h3>💻 Tech</h3>
+      <p>Just random tips or stuff I want to give an insight on.</p>
+    </div>
+    <div class="topic-card">
+      <h3>🍔 Food</h3>
+      <p>I love food and I intend to share recipes, food places, reviews on places, etc.</p>
+    </div>
+    <div class="topic-card">
+      <h3>💭 Random Thoughts</h3>
+      <p>Random thoughts, video games, sports, my upbringing, politics, etc.</p>
+    </div>
   </div>
 </section>
 
-<section class="latest-posts">
-  <h2>Latest Blog Posts</h2>
-  <p>Here’s what I’ve been writing lately—dive into the newest posts below, or check out the full blog for more.</p>
-
-  <div id="post-list"></div>
-  <a href="posts.html" class="btn">See all posts →</a>
+<!-- Latest Blog Posts -->
+<section>
+  <h2>📝 Latest Blog Posts</h2>
+  <p style="text-align:center; margin-bottom: 2rem;">
+    Here’s what I’ve been writing lately — dive into my newest blog posts below, or check out the full blog for more.
+  </p>
+  <div class="post-list" id="post-list"></div>
 </section>
 
-<section class="about-preview">
-  <h2>About Me</h2>
-  <p>I’m just a curious person who enjoys learning, creating, and writing about things I love.  
-  This blog is part journal, part guide, and part experiment.  
-  <a href="about.html">Read more about me →</a></p>
+<!-- About Me Preview -->
+<section>
+  <div class="about-preview">
+    <h2>👋 About Me</h2>
+    <p>Want to know more about who’s behind this blog? I share my journey, interests, and stories in my About Me page.</p>
+    <a href="about.html">Read More →</a>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p>© 2025 Juan’s Blog</p>
+  @ Juan's Blog
 </footer>
 
 <script>
-  // Load posts.json
-  fetch('posts.json')
-    .then(res => res.json())
-    .then(posts => {
+  async function loadPosts() {
+    try {
+      const response = await fetch('posts.json');
+      const posts = await response.json();
       const container = document.getElementById('post-list');
-      let html = '<div class="posts-grid">';
 
-      // newest first, show 3 latest
-      posts.slice().reverse().slice(0,3).forEach(post => {
-        html += `
-          <div class="post">
-            <h3><a href="${post.link}">${post.title}</a></h3>
-            <p>${post.excerpt}</p>
-            <small>📅 ${post.date} | <a href="${post.category}.html">${post.category}</a></small>
-          </div>
+      // Show only the 2 most recent posts
+      posts.slice(0, 2).forEach(post => {
+        const card = document.createElement('div');
+        card.classList.add('post-card');
+        card.innerHTML = `
+          <h3><a href="${post.link}">${post.title}</a></h3>
+          <small>📅 ${post.date} | 🏷️ ${post.category}</small>
+          <p>${post.excerpt}</p>
         `;
+        container.appendChild(card);
       });
-
-      html += '</div>';
-      container.innerHTML = html;
-    })
-    .catch(err => {
+    } catch (err) {
       console.error('Error loading posts:', err);
-    });
+    }
+  }
+
+  loadPosts();
 </script>
 
 </body>
 </html>
-
