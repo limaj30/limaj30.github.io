@@ -31,12 +31,57 @@
   </nav>
 </header>
 
+<style>
+  header nav {
+    display: flex;
+    justify-content: center; /* centers the links */
+    gap: 2rem; /* space between them */
+  }
+  header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+</style>
+
+
 <section class="hero">
-  <h1>Hi, my name is Juan!</h1>
-  <p>I write about tech, food, and random things that spark my interest.  
-  This blog is my space to share tips, experiences, and ideas—sometimes helpful, sometimes just fun.  
-  Whether you’re into gadgets, recipes, or random thoughts, I hope you’ll find something here that makes you stop and think (or at least smile).</p>
+  <h1>Welcome to my corner of the internet 👋</h1>
+  <p>I share thoughts on tech, gaming, and everyday lessons worth learning.</p>
+  <a href="posts.html" class="cta">Read My Blog →</a>
 </section>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #0077cc;
+    color: white;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .cta:hover {
+    background: #005fa3;
+    color: white;
+  }
+</style>
+
 
 <section class="categories">
   <h2>Explore Topics</h2>
