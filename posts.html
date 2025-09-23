@@ -36,4 +36,89 @@
     }
     .post-list {
       display: grid;
-      grid-template-columns: repeat(
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+    .post-card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+    }
+    .post-card h2 a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    .post-card small {
+      display: block;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+    .post-card p {
+      margin: 0 0 1rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .post-card a.read-more {
+      display: inline-block;
+      margin-top: auto;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>📚 All Blog Posts</h1>
+  <div class="post-list" id="post-list"></div>
+</main>
+
+<script>
+  async function loadPosts() {
+    try {
+      const response = await fetch('posts.json');
+      const posts = await response.json();
+      const container = document.getElementById('post-list');
+
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.classList.add('post-card');
+        card.innerHTML = `
+          <h2><a href="${post.link}">${post.title}</a></h2>
+          <small>📅 ${post.date} | 🏷️ ${post.category}</small>
+          <p>${post.excerpt}</p>
+          <a href="${post.link}" class="read-more">Read more →</a>
+        `;
+        container.appendChild(card);
+      });
+    } catch (err) {
+      console.error('Error loading posts:', err);
+    }
+  }
+
+  loadPosts();
+</script>
+
+</body>
+</html>
