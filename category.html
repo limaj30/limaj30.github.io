@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Category | Juan's Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #222;
+      border-bottom: 3px solid #444;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    header nav a:hover {
+      color: #00bfff;
+    }
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0077cc;
+    }
+    .post-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .post-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+    .post-card h3 a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <h2 id="category-title"></h2>
+  <div id="post-list" class="post-list"></div>
+</section>
+
+<footer>
+  @ Juan's Blog
+</footer>
+
+<script>
+  // Get category from URL query (e.g. ?cat=Tech)
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("cat");
+
+  document.getElementById("category-title").textContent = category ? category : "All Posts";
+
+  async function loadPosts() {
+    try {
+      const response = await fetch('posts.json');
+      const posts = await response.json();
+      const container = document.getElementById('post-list');
+
+      // Filter by category
+      const filtered = posts.filter(p => p.category.toLowerCase() === category.toLowerCase());
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<p style="text-align:center;">No posts found in this category.</p>`;
+        return;
+      }
+
+      filtered.forEach(post => {
+        const card = document.createElement('div');
+        card.classList.add('post-card');
+        card.innerHTML = `
+          <h3><a href="${post.link}">${post.title}</a></h3>
+          <small>📅 ${post.date} | 🏷️ ${post.category}</small>
+          <p>${post.excerpt}</p>
+        `;
+        container.appendChild(card);
+      });
+    } catch (err) {
+      console.error('Error loading posts:', err);
+    }
+  }
+
+  if (category) loadPosts();
+</script>
+
+</body>
+</html>
