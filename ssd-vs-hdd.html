@@ -2,18 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SSD vs HDD — Which Should You Choose?</title>
+  <title>Why I Love Video Games | Juan Lima Blog</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width:800px; margin:2rem auto; background:#f9f9f9; color:#333; line-height:1.6; padding: 0 1rem; }
-    header nav a { margin-right:1rem; text-decoration:none; color:#0077cc; }
-    article { background:#fff; padding:2rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    h1 { margin-top:0; }
-    h2 { margin-top:1.5rem; }
-    footer { margin-top:2rem; font-size:0.9rem; color:#666; }
+    /* Reset & Body */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    header {
+      background: #222;
+      border-bottom: 3px solid #444;
+      padding: 1rem 0;
+    }
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    header nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #00bfff;
+    }
+
+    /* Main content wrapper */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Blog post container */
+    .post-container {
+      max-width: 800px;
+      width: 100%;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .post-container h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #0077cc;
+    }
+    .post-container small {
+      display: block;
+      margin: 0.5rem 0 2rem;
+      color: #666;
+    }
+    .post-container p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    /* Back to posts link */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .back-link:hover {
+      color: #005fa3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+      margin-top: auto; /* pushes footer to bottom */
+    }
   </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <header>
   <nav>
     <a href="index.html">Home</a>
@@ -23,34 +107,64 @@
   </nav>
 </header>
 
-<article>
-  <h1>SSD vs HDD — Which Should You Choose?</h1>
-  <p><small>📅 2025-09-22 | Category: <a href="tech.html">Tech</a></small></p>
+<!-- Blog Post Content -->
+<main>
+  <div class="post-container">
+    <a href="posts.html" class="back-link">← Back to Posts</a>
 
-  <p>When buying or building a computer, storage is one of the most important choices you’ll make.  
-  Hard Disk Drives (HDDs) have been around for decades, but Solid State Drives (SSDs) have changed the game when it comes to speed and performance.</p>
+    <h1>Why I Love Video Games</h1>
+    <small>📅 09-23-2025 | 🏷️ Tech </small>
 
-  <h2>Speed</h2>
-  <p>SSDs are much faster than HDDs. With an SSD, your computer can boot in seconds instead of minutes, and programs load almost instantly.  
-  HDDs, while still usable, feel sluggish by comparison—especially when you’re multitasking.</p>
+    <p>
+      When buying or building a computer, storage is one of the most important choices you’ll make. The two main options are SSDs (Solid State Drives) and HDDs (Hard Disk Drives). Both store your files, but they work very differently – and the right choice depends on how you plan to use your system. 
+    </p>
+    <p>
+      What’s the difference?
+- HDD (Hard Disk Drive): Uses spinning magnetic disks (like a record player) to read and write data. 
+- SSD (Solid State Drive): Uses flash memory with no moving parts. This makes them faster, quieter, more durable, and power-efficient.
 
-  <h2>Capacity</h2>
-  <p>HDDs win when it comes to storage size per dollar. You can get multiple terabytes of space at a much lower price than SSDs.  
-  This makes HDDs useful for storing large files like videos, photos, or backups.</p>
+    </p>
+    <p>
+      Speed Comparison
+This is where the difference really shows:
+- Booting Windows: HDD → ~ 1 minute, SSD → ~10-15 seconds.  
+- Loading games: HDD → noticeably longer load screens, SSD → much faster
+- File transfers: HDD → slower and prone to wear, SSD → fast
+SSDs make your system feel faster and more responsive.
 
-  <h2>Reliability</h2>
-  <p>Because SSDs have no moving parts, they’re generally more reliable and less prone to physical damage.  
-  HDDs, with spinning disks and mechanical arms, are more likely to fail if dropped or heavily used.</p>
+    </p>
+    <p>
+      When you should choose an SSD
+- Everyday computing (faster boot and app load times)
+- Gaming (reduce loading screens)
+- Creative work (e.g. video editing or 3D rendering)
+- Laptops (better durability and battery life)
 
-  <h2>Verdict</h2>
-  <p>If you want speed and better performance, go with an SSD for your main drive.  
-  If you need lots of cheap storage, an HDD is still useful as a secondary drive.  
-  For many people, the best solution is a combination: an SSD for your operating system and programs, plus an HDD for bulk storage.</p>
+    </p>
+    <p>
+      When you should choose an HDD
+- Storing large amounts of data (music, pictures, movies, backups)
+- Budget builds where maximum storage size is more important than speed. 
+      Looking back, gaming has been there through every stage of my life. From middle school CoD lobbies to late-night FIFA rivalries, it’s more than just a hobby—it’s a shared experience, a way to bond, and one of my favorite escapes.
+    </p>
+    <p>
+      Final Thoughts
+Many users combine both:
+- SSD (fast): Install your operating system and frequently used apps/games
+- HDD (large): Store media files, backups, or anything you don’t access daily. 
 
-  <footer>
-    <p>Thanks for reading! <a href="posts.html">← Back to all posts</a></p>
-  </footer>
-</article>
+    </p>
+    <a href="posts.html" class="back-link">← Back to Posts</a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  @ Juan's Blog
+</footer>
+
+</body>
+</html>
 
 </body>
 </html>
