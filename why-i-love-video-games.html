@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <title>Why I Love Video Games | Juan Lima Blog</title>
   <style>
-    body {
+    /* Reset & Body */
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f8;
       color: #333;
+      display: flex;
+      flex-direction: column;
     }
+
     /* Navbar */
     header {
       background: #222;
@@ -31,10 +37,19 @@
     header nav a:hover {
       color: #00bfff;
     }
+
+    /* Main content wrapper */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
     /* Blog post container */
     .post-container {
       max-width: 800px;
-      margin: 3rem auto;
+      width: 100%;
       background: #fff;
       padding: 2rem;
       border-radius: 12px;
@@ -55,13 +70,28 @@
       font-size: 1.05rem;
       color: #444;
     }
+
+    /* Back to posts link */
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .back-link:hover {
+      color: #005fa3;
+    }
+
     /* Footer */
     footer {
       text-align: center;
       padding: 1.5rem;
       background: #222;
       color: white;
-      margin-top: 3rem;
+      margin-top: auto; /* pushes footer to bottom */
     }
   </style>
 </head>
@@ -78,27 +108,33 @@
 </header>
 
 <!-- Blog Post Content -->
-<div class="post-container">
-  <h1>Why I Love Video Games</h1>
-  <small>📅 09-25-2025 | 🏷️ Random Thoughts</small>
+<main>
+  <div class="post-container">
+    <a href="posts.html" class="back-link">← Back to Posts</a>
 
-  <p>
-    Video games were more than just a hobby for me—they were a safe escape, 
-    a way to bond with friends, and some of my best memories growing up.
-  </p>
-  <p>
-    Nothing beat the chaos of screaming at each other in game lobbies before a match.  
-    (If you know, you know.)
-  </p>
-  <p>
-    Growing up in a neighborhood with gangs, in a weird way, games kinda protected me 
-    from having to be outside. I know it sounds sad—but honestly, they gave me a safe outlet.  
-  </p>
-  <p>
-    And whether it was celebrating a last-minute FIFA goal or surviving in Call of Duty,  
-    those moments shaped my childhood in a positive way.
-  </p>
-</div>
+    <h1>Why I Love Video Games</h1>
+    <small>📅 09-25-2025 | 🏷️ Random Thoughts</small>
+
+    <p>
+      Video games were more than just a hobby for me—they were a safe escape, 
+      a way to bond with friends, and some of my best memories growing up.
+    </p>
+    <p>
+      Nothing beat the chaos of screaming at each other in game lobbies before a match.  
+      (If you know, you know.)
+    </p>
+    <p>
+      Growing up in a neighborhood with gangs, in a weird way, games kinda protected me 
+      from having to be outside. I know it sounds sad—but honestly, they gave me a safe outlet.  
+    </p>
+    <p>
+      And whether it was celebrating a last-minute FIFA goal or surviving in Call of Duty,  
+      those moments shaped my childhood in a positive way.
+    </p>
+
+    <a href="posts.html" class="back-link">← Back to Posts</a>
+  </div>
+</main>
 
 <!-- Footer -->
 <footer>
@@ -107,3 +143,4 @@
 
 </body>
 </html>
+
