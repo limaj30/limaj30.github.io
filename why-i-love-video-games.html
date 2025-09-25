@@ -2,67 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Why I Love Video Games | Juan's Blog</title>
+  <title>Why I Love Video Games | Juan Lima Blog</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f8;
       color: #333;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
     }
+    /* Navbar */
     header {
-      margin-bottom: 2rem;
+      background: #222;
+      border-bottom: 3px solid #444;
+      padding: 1rem 0;
     }
-    a {
-      color: #0077cc;
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    header nav a {
       text-decoration: none;
+      color: white;
       font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
     }
-    a:hover {
-      text-decoration: underline;
+    header nav a:hover {
+      color: #00bfff;
     }
-    h1 {
+    /* Blog post container */
+    .post-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .post-container h1 {
+      margin-top: 0;
+      font-size: 2rem;
       color: #0077cc;
-      margin-bottom: 1rem;
     }
+    .post-container small {
+      display: block;
+      margin: 0.5rem 0 2rem;
+      color: #666;
+    }
+    .post-container p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #444;
+    }
+    /* Footer */
     footer {
-      margin-top: 3rem;
       text-align: center;
-      color: #555;
+      padding: 1.5rem;
+      background: #222;
+      color: white;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
 
+<!-- Navbar -->
 <header>
-  <a href="posts.html">← Back to all posts</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<main>
+<!-- Blog Post Content -->
+<div class="post-container">
   <h1>Why I Love Video Games</h1>
-  <p><em>09-25-2025 | Random Thoughts</em></p>
+  <small>📅 09-25-2025 | 🏷️ Random Thoughts</small>
 
-  <p>The earliest memory I have of playing video games is on my brother’s original Xbox. I can’t even recall the game, but I do remember hanging out with him that day—and that was my first introduction to the gaming world.</p>
+  <p>
+    Video games were more than just a hobby for me—they were a safe escape, 
+    a way to bond with friends, and some of my best memories growing up.
+  </p>
+  <p>
+    Nothing beat the chaos of screaming at each other in game lobbies before a match.  
+    (If you know, you know.)
+  </p>
+  <p>
+    Growing up in a neighborhood with gangs, in a weird way, games kinda protected me 
+    from having to be outside. I know it sounds sad—but honestly, they gave me a safe outlet.  
+  </p>
+  <p>
+    And whether it was celebrating a last-minute FIFA goal or surviving in Call of Duty,  
+    those moments shaped my childhood in a positive way.
+  </p>
+</div>
 
-  <p>My more vivid memories came later, when Call of Duty became my second home (I know, sad). But honestly, where I grew up there were a lot of gangs—and there still are—so in a weird way, video games kept me safe. They gave me a reason to stay inside, hop on with my friends, and avoid a lot of the stuff that was happening outside.</p>
-
-  <p>Don’t get me wrong though, I wasn’t just a full-time homebody. I still joined after-school programs, played varsity soccer and volleyball in high school, and even ran with the running club back in middle school. But when the day wound down, you could bet I was in a CoD lobby or a FIFA (now EA FC) LAN tournament.</p>
-
-  <p>Nothing beat the chaos of screaming at each other in game lobbies before a match (if you know, you know). The trash talk was ruthless, and the celebrations after a last-minute FIFA goal were pure comedy. It was loud, chaotic, and honestly, some of the best memories I have with friends.</p>
-
-  <p>For me, video games became a way to decompress and socialize—without the pressure of “real world” expectations. It was hanging out, but from the comfort of home (or surrounded by snacks and broken controllers).</p>
-
-  <p>Looking back, gaming has been there through every stage of my life. From middle school CoD lobbies to late-night FIFA rivalries, it’s more than just a hobby—it’s a shared experience, a way to bond, and one of my favorite escapes.</p>
-
-  <p>At the end of the day, that’s why I love video games. They’re fun, frustrating, sometimes ridiculous—but they’ve given me memories, friendships, and moments I wouldn’t trade for anything.</p>
-
-  <p><strong>So I’ll end this with a question: What’s your earliest gaming memory?</strong></p>
-</main>
-
+<!-- Footer -->
 <footer>
   @ Juan's Blog
 </footer>
